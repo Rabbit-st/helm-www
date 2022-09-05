@@ -426,17 +426,22 @@ abbrev 5 "hello world"
 
 两边都省略
 
+参数：
+* 左侧偏移值
+* 最大长度
+* 字符串
+
 ```yaml
 abbrevboth 5 10 "1234 5678 9123"
 ```
 
 上述结果为： `...5678...`
 
-It takes:
+		 
 
-* 左侧偏移值
-* 最大长度
-* 字符串
+				 
+			  
+		   
 
 ### initials
 
@@ -457,7 +462,7 @@ initials "First Try"
 * `randNumeric` 使用 `0-9`
 * `randAscii` 使用所有的可打印ASCII字符
 
-每个函数都需要一个参数：字符串的整型长度
+每个函数都需要一个参数：生成的字符串长度（参数值为整型）
 
 ```yaml
 randNumeric 3
@@ -1077,7 +1082,7 @@ Helm 提供了一个key/value存储类型称为`dict`（"dictionary"的简称，
 
 字典的key **必须是字符串**。但值可以是任意类型，甚至是另一个`dict` 或 `list`。
 
-不像`list`， `dict`不是不可变的。`set`和`unset`函数会修改字典的内容。
+不像`list`， `dict`是不可变的。`set`和`unset`函数会修改字典的内容。
 
 Helm 提供了以下函数支持使用字典：[deepCopy(mustDeepCopy)](#deepcopy-mustdeepcopy),
 [dict](#dict), [get](#get),[hasKey](#haskey), [keys](#keys), [merge (mustMerge)](#merge-mustmerge),
